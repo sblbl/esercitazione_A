@@ -29,11 +29,11 @@ const describeArc = (x, y, radius, startAngle, endAngle) => {
 	    "A", radius, radius, 0, largeArcFlag, 0, end.x, end.y
 	].join(" ")
 
-	return d + `L ${radius} ${radius} Z`       
+	return d + `L ${x} ${y} Z`       
 }
 
 // when you need to make the slice of the pie chart : 
-// describeArc(pieRadius/2, pieRadius/2, pieRadius, 0, (360*percentage))
+// describeArc(pieRadius, pieRadius, pieRadius, 0, (360*percentage))
 
 const data = d3.csvParse(dataset, d => {
 	return {
